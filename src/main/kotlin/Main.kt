@@ -126,10 +126,9 @@ fun main() {
         question.options.forEach { println(it) }
 
         var answer: String?
-        // Цикл ввода до получения корректного ответа (только А, Б, В, Г)
         while (true) {
             println("Введите ваш ответ (А, Б, В, Г):")
-            answer = readLine()?.trim()?.toUpperCase()
+            answer = readLine()?.trim()?.uppercase()
             if (answer in listOf("А", "Б", "В", "Г")) {
                 break
             } else {
